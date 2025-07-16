@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SkillBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="theme-style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-light">Light</button>
+                <button id="theme-dark">Dark</button>
+                <button id="theme-system">System</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/icons/logo.svg" alt="SkillBridge Logo">
+                <!-- <span>SkillBridge</span> -->
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="freelancers.html">Service Experts</a></li>
+                    <li><a href="clients.html">For Clients</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Log In</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>We're Here to Help</h1>
+            <p>Have questions or need assistance? Our team is ready to help you with any inquiries.</p>
+        </div>
+    </section>
+
+    <!-- Contact Options Section -->
+    <section class="contact-options">
+        <div class="container">
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Live Chat</h3>
+                    <p>Chat with our support team in real-time for immediate assistance.</p>
+                    <a href="#" class="btn btn-outline">Start Chat</a>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>Send us an email and we'll respond within 24 hours.</p>
+                    <a href="mailto:support@skillbridge.com" class="btn btn-outline">Email Support</a>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Speak directly with a support representative during business hours.</p>
+                    <a href="tel:+18005551234" class="btn btn-outline">+1 (800) 555-1234</a>
+                </div>
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Help Center</h3>
+                    <p>Find answers to common questions in our comprehensive help center.</p>
+                    <a href="#" class="btn btn-outline">Visit Help Center</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="account">Account Help</option>
+                            <option value="payment">Payment Issue</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="feedback">Feedback/Suggestions</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Headquarters</h4>
+                        <p>1234 SkillBridge Way<br>San Francisco, CA 94107<br>United States</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+1 (800) 555-1234<br>Mon-Fri, 9am-5pm PST</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>support@skillbridge.com<br>info@skillbridge.com</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h4>Follow Us</h4>
+                    <div class="links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Offices Section -->
+    <section class="global-offices">
+        <div class="container">
+            <h2>Our Global Offices</h2>
+            <div class="offices-grid">
+                <div class="office-card">
+                    <div class="office-image">
+                        <img src="images/offices/san-francisco.jpg" alt="San Francisco Office">
+                    </div>
+                    <div class="office-info">
+                        <h3>San Francisco</h3>
+                        <p>1234 SkillBridge Way<br>San Francisco, CA 94107<br>United States</p>
+                        <a href="#" class="btn btn-outline">View on Map</a>
+                    </div>
+                </div>
+                <div class="office-card">
+                    <div class="office-image">
+                        <img src="images/offices/new-york.jpg" alt="New York Office">
+                    </div>
+                    <div class="office-info">
+                        <h3>New York</h3>
+                        <p>5678 Bridge Street<br>New York, NY 10001<br>United States</p>
+                        <a href="#" class="btn btn-outline">View on Map</a>
+                    </div>
+                </div>
+                <div class="office-card">
+                    <div class="office-image">
+                        <img src="images/offices/london.jpg" alt="London Office">
+                    </div>
+                    <div class="office-info">
+                        <h3>London</h3>
+                        <p>90-91 SkillBridge Lane<br>London EC1A 1AA<br>United Kingdom</p>
+                        <a href="#" class="btn btn-outline">View on Map</a>
+                    </div>
+                </div>
+                <div class="office-card">
+                    <div class="office-image">
+                        <img src="images/offices/sydney.jpg" alt="Sydney Office">
+                    </div>
+                    <div class="office-info">
+                        <h3>Sydney</h3>
+                        <p>Level 10, 100 Bridge Street<br>Sydney NSW 2000<br>Australia</p>
+                        <a href="#" class="btn btn-outline">View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does it take to get a response?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our average response time is less than 24 hours for email inquiries. For live chat and phone support, you'll typically connect with a representative immediately during business hours (9am-5pm PST, Monday-Friday).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What information should I include in my support request?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Please include your account email (if applicable), a detailed description of your issue or question, any error messages you've received, and steps you've already taken to try to resolve the issue. For payment-related questions, include transaction details if possible.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer support in languages other than English?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we currently offer support in Spanish, French, German, and Mandarin Chinese. Please indicate your preferred language when contacting us, and we'll connect you with an appropriate support representative.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I visit your offices in person?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our offices are primarily for our employees, but we do welcome visitors by appointment. Please contact us in advance to schedule a visit, and be prepared to show valid identification upon arrival for security purposes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Still Have Questions?</h2>
+                <p>Our support team is available 24/7 to assist you with any questions or concerns.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Contact Support</a>
+                    <a href="#" class="btn btn-outline">Visit Help Center</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SkillBridge</h3>
+                    <p>Connecting skilled professionals with clients worldwide since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>For Freelancers</h4>
+                    <ul>
+                        <li><a href="#">How to Get Hired</a></li>
+                        <li><a href="#">Profile Tips</a></li>
+                        <li><a href="#">Pricing Strategies</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>For Clients</h4>
+                    <ul>
+                        <li><a href="#">How to Hire</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Client Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Trust & Safety</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 SkillBridge. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/contact-form.js"></script>
+</body>
+</html>

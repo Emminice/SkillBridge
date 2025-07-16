@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - SkillBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="theme-style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-light">Light</button>
+                <button id="theme-dark">Dark</button>
+                <button id="theme-system">System</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/icons/logo.svg" alt="SkillBridge Logo">
+                <!-- <span>SkillBridge</span> -->
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="freelancers.html">Service Experts</a></li>
+                    <li><a href="clients.html">For Clients</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Log In</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Professional Services Marketplace</h1>
+            <p>Find the perfect service for your needs from thousands of skilled professionals.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for services...">
+                <button class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Categories Section -->
+    <section class="services-categories">
+        <div class="container">
+            <h2>Browse by Category</h2>
+            <div class="categories-tabs">
+                <button class="tab-btn active" data-category="all">All Categories</button>
+                <button class="tab-btn" data-category="home">Home Services</button>
+                <button class="tab-btn" data-category="business">Business</button>
+                <button class="tab-btn" data-category="creative">Creative</button>
+                <button class="tab-btn" data-category="tech">Technology</button>
+                <button class="tab-btn" data-category="events">Events</button>
+            </div>
+            <div class="categories-grid">
+                <!-- Home Services -->
+                <div class="service-category" data-category="home">
+                    <div class="category-header">
+                        <i class="fas fa-home"></i>
+                        <h3>Home Services</h3>
+                    </div>
+                    <div class="services-list">
+                        <a href="#">Plumbing</a>
+                        <a href="#">Electrical</a>
+                        <a href="#">Cleaning</a>
+                        <a href="#">Handyman</a>
+                        <a href="#">Landscaping</a>
+                        <a href="#">Painting</a>
+                        <a href="#">Carpentry</a>
+                        <a href="#">Appliance Repair</a>
+                        <a href="#">HVAC</a>
+                        <a href="#">Moving Services</a>
+                        <a href="#">View All Home Services</a>
+                    </div>
+                </div>
+                
+                <!-- Business Services -->
+                <div class="service-category" data-category="business">
+                    <div class="category-header">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Business Services</h3>
+                    </div>
+                    <div class="services-list">
+                        <a href="#">Accounting</a>
+                        <a href="#">Legal</a>
+                        <a href="#">Consulting</a>
+                        <a href="#">Virtual Assistant</a>
+                        <a href="#">HR Services</a>
+                        <a href="#">Business Plans</a>
+                        <a href="#">Market Research</a>
+                        <a href="#">Financial Consulting</a>
+                        <a href="#">Administrative Support</a>
+                        <a href="#">Data Entry</a>
+                        <a href="#">View All Business Services</a>
+                    </div>
+                </div>
+                
+                <!-- Creative Services -->
+                <div class="service-category" data-category="creative">
+                    <div class="category-header">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Creative Services</h3>
+                    </div>
+                    <div class="services-list">
+                        <a href="#">Graphic Design</a>
+                        <a href="#">Video Editing</a>
+                        <a href="#">Photography</a>
+                        <a href="#">Illustration</a>
+                        <a href="#">Animation</a>
+                        <a href="#">Voice Over</a>
+                        <a href="#">Music Production</a>
+                        <a href="#">Creative Writing</a>
+                        <a href="#">Branding</a>
+                        <a href="#">Art & Craft</a>
+                        <a href="#">View All Creative Services</a>
+                    </div>
+                </div>
+                
+                <!-- Technology Services -->
+                <div class="service-category" data-category="tech">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Technology Services</h3>
+                    </div>
+                    <div class="services-list">
+                        <a href="#">Web Development</a>
+                        <a href="#">Mobile App Development</a>
+                        <a href="#">Software Development</a>
+                        <a href="#">IT Support</a>
+                        <a href="#">Cybersecurity</a>
+                        <a href="#">Data Science</a>
+                        <a href="#">AI & Machine Learning</a>
+                        <a href="#">Blockchain</a>
+                        <a href="#">Cloud Computing</a>
+                        <a href="#">Game Development</a>
+                        <a href="#">View All Tech Services</a>
+                    </div>
+                </div>
+                
+                <!-- Events Services -->
+                <div class="service-category" data-category="events">
+                    <div class="category-header">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Events Services</h3>
+                    </div>
+                    <div class="services-list">
+                        <a href="#">Catering</a>
+                        <a href="#">Event Planning</a>
+                        <a href="#">Photography</a>
+                        <a href="#">Videography</a>
+                        <a href="#">DJ Services</a>
+                        <a href="#">Bartending</a>
+                        <a href="#">Decorations</a>
+                        <a href="#">Entertainment</a>
+                        <a href="#">Venue Booking</a>
+                        <a href="#">Event Staffing</a>
+                        <a href="#">View All Event Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Services Section -->
+    <section class="popular-services">
+        <div class="container">
+            <h2>Popular Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/services/plumbing.jpg" alt="Plumbing Services">
+                        <div class="price">$50 - $150/hr</div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Plumbing Services</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7 (1,245)</span>
+                        </div>
+                        <p class="description">Professional plumbing services including repairs, installations, and maintenance for residential and commercial properties.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-bolt"></i> 1,234 jobs completed</span>
+                            <span><i class="fas fa-heart"></i> 98% positive rating</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/services/catering.jpg" alt="Catering Services">
+                        <div class="price">$500 - $5,000/event</div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Catering Services</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (892)</span>
+                        </div>
+                        <p class="description">Professional catering for weddings, corporate events, and private parties with customizable menus.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-bolt"></i> 756 jobs completed</span>
+                            <span><i class="fas fa-heart"></i> 99% positive rating</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/services/web-design.jpg" alt="Web Design">
+                        <div class="price">$500 - $10,000/project</div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Web Design</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9 (3,456)</span>
+                        </div>
+                        <p class="description">Custom website design and development tailored to your business needs with responsive design.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-bolt"></i> 2,345 jobs completed</span>
+                            <span><i class="fas fa-heart"></i> 97% positive rating</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/services/graphic-design.jpg" alt="Graphic Design">
+                        <div class="price">$30 - $150/hr</div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Graphic Design</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.8 (4,123)</span>
+                        </div>
+                        <p class="description">Professional graphic design services including logos, branding, marketing materials and more.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-bolt"></i> 3,567 jobs completed</span>
+                            <span><i class="fas fa-heart"></i> 96% positive rating</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/services/cleaning.jpg" alt="Professional Cleaning">
+                        <div class="price">$25 - $75/hr</div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Professional Cleaning</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9 (2,345)</span>
+                        </div>
+                        <p class="description">Thorough cleaning services for homes and offices with eco-friendly products available.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-bolt"></i> 1,987 jobs completed</span>
+                            <span><i class="fas fa-heart"></i> 99% positive rating</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/services/marketing.jpg" alt="Digital Marketing">
+                        <div class="price">$1,000 - $10,000/project</div>
+                    </div>
+                    <div class="service-info">
+                        <h3>Digital Marketing</h3>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7 (1,876)</span>
+                        </div>
+                        <p class="description">Comprehensive digital marketing strategies including SEO, social media, and PPC advertising.</p>
+                        <div class="service-meta">
+                            <span><i class="fas fa-bolt"></i> 1,234 jobs completed</span>
+                            <span><i class="fas fa-heart"></i> 95% positive rating</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="#" class="btn btn-outline">View More Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How to Hire a Service Professional</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Search for Services</h3>
+                        <p>Browse our extensive categories or use the search bar to find the exact service you need.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Compare Professionals</h3>
+                        <p>Review profiles, portfolios, ratings and pricing to find the perfect match for your project.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Contact & Discuss</h3>
+                        <p>Message the professional directly to discuss your project details and requirements.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Hire & Collaborate</h3>
+                        <p>Once you're ready, hire the professional and collaborate through our secure platform.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Pay Securely</h3>
+                        <p>Make payments with confidence through our protected payment system.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Leave Feedback</h3>
+                        <p>After completion, leave a review to help others in the community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Found an amazing plumber through SkillBridge who fixed my leaky pipes in no time. The platform made it so easy to compare professionals and read reviews before hiring.</p>
+                    </div>
+                    <div class="author">
+                        <img src="images/testimonials/client1.jpg" alt="James Wilson">
+                        <div class="author-info">
+                            <h4>Samuel Oladipo</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Our company regularly uses SkillBridge to find caterers for corporate events. The quality and professionalism has been consistently excellent.</p>
+                    </div>
+                    <div class="author">
+                        <img src="images/testimonials/client2.jpg" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <h4>Deborah Bassey</h4>
+                            <p>Office Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>As a small business owner, SkillBridge has been invaluable for finding affordable yet high-quality services from web design to accounting.</p>
+                    </div>
+                    <div class="author">
+                        <img src="images/testimonials/client3.jpg" alt="Michael Chen">
+                        <div class="author-info">
+                            <h4>Joseph Chukwuma</h4>
+                            <p>Small Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Perfect Service Professional?</h2>
+                <p>Join thousands of satisfied clients who have found reliable professionals through SkillBridge.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Browse Services</a>
+                    <a href="#" class="btn btn-outline">Learn How It Works</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SkillBridge</h3>
+                    <p>Connecting skilled professionals with clients worldwide since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>For Freelancers</h4>
+                    <ul>
+                        <li><a href="#">How to Get Hired</a></li>
+                        <li><a href="#">Profile Tips</a></li>
+                        <li><a href="#">Pricing Strategies</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>For Clients</h4>
+                    <ul>
+                        <li><a href="#">How to Hire</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Client Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Trust & Safety</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 SkillBridge. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/language-switcher.js"></script>
+</body>
+</html>

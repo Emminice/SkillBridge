@@ -1,0 +1,20 @@
+/* Light Theme Specific Styles */
+:root {
+  --primary-color: #5e56e8;
+  --primary-dark: #4a42d6;
+  --primary-light: #7d76ff;
+  --secondary-color: #ff6b8b;
+  --secondary-dark: #ff4d73;
+  --accent-color: #42b983;
+  --accent-dark: #36a072;
+  --text-color: #2d3748;
+  --text-light: #4a5568;
+  --text-lighter: #718096;
+  --bg-color: #f8fafc;
+  --bg-light: #ffffff;
+  --border-color: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Additional light theme specific styles can be added here */

@@ -1,0 +1,548 @@
+/* Freelancers Page Specific Styles */
+.freelancers-hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, rgba(94, 86, 232, 0.1) 0%, rgba(66, 185, 131, 0.1) 100%);
+  text-align: center;
+}
+
+.freelancers-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+}
+
+.freelancers-hero p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.freelancers-hero .search-bar {
+  display: flex;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--bg-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.freelancers-hero .search-bar input,
+.freelancers-hero .search-bar select {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.freelancers-hero .search-bar input:focus,
+.freelancers-hero .search-bar select:focus {
+  outline: none;
+  background-color: var(--bg-color);
+}
+
+.freelancers-hero .search-bar select {
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.freelancers-hero .search-bar button {
+  border-radius: 0;
+  padding: 15px 30px;
+}
+
+.freelancers-filter {
+  padding: 30px 0;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.freelancers-filter .filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.freelancers-filter .filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.freelancers-filter label {
+  font-weight: 600;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.freelancers-filter select,
+.freelancers-filter input {
+  padding: 10px 15px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.freelancers-filter select:hover,
+.freelancers-filter input:hover {
+  border-color: var(--primary-color);
+}
+
+.freelancers-filter .btn-outline {
+  margin-left: auto;
+}
+
+.freelancers-grid-section {
+  padding: 80px 0;
+}
+
+.freelancers-grid-section .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.freelancers-grid-section .sort-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.freelancers-grid-section .sort-options select {
+  padding: 8px 15px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.freelancers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 3rem;
+}
+
+.freelancer-card {
+  background-color: var(--bg-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.freelancer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.freelancer-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.freelancer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.freelancer-card:hover .freelancer-image img {
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  z-index: 1;
+}
+
+.badge.top-rated {
+  background-color: #ff9f43;
+}
+
+.badge.pro {
+  background-color: #7367f0;
+}
+
+.badge.rising-talent {
+  background-color: #28c76f;
+}
+
+.rating {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color: white;
+  transition: var(--transition);
+}
+
+.rating i {
+  color: #ffc107;
+}
+
+.freelancer-info {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.freelancer-info h3 {
+  margin-bottom: 5px;
+  transition: var(--transition);
+}
+
+.freelancer-card:hover .freelancer-info h3 {
+  color: var(--primary-color);
+}
+
+.freelancer-info .title {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.freelancer-info .location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.freelancer-info .location i {
+  color: var(--secondary-color);
+}
+
+.freelancer-info .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.freelancer-info .skills span {
+  background-color: rgba(94, 86, 232, 0.1);
+  color: var(--primary-dark);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  transition: var(--transition);
+}
+
+.freelancer-card:hover .skills span {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.freelancer-info .rate {
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+
+.freelancer-card:hover .rate {
+  color: var(--secondary-color);
+}
+
+.freelancer-info .availability {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+.freelancer-info .availability i {
+  color: #28c76f;
+}
+
+.freelancer-info .availability i.fa-clock {
+  color: #ff9f43;
+}
+
+.freelancer-info .action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.freelancer-info .action-buttons .btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.view-more {
+  text-align: center;
+}
+
+.why-choose-freelancers {
+  padding: 80px 0;
+  background-color: var(--bg-light);
+}
+
+.why-choose-freelancers h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.reason-card {
+  background-color: var(--bg-light);
+  padding: 30px;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  border: 1px solid transparent;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.reason-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(94, 86, 232, 0.1);
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  transition: var(--transition);
+}
+
+.reason-card:hover .reason-icon {
+  background-color: var(--primary-color);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.reason-card h3 {
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+
+.reason-card:hover h3 {
+  color: var(--primary-color);
+}
+
+.testimonials {
+  padding: 80px 0;
+  background-color: var(--bg-color);
+}
+
+.testimonials h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial {
+  background-color: var(--bg-light);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.testimonial:hover::before {
+  height: 100%;
+}
+
+.quote {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.quote i {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 2rem;
+  color: rgba(94, 86, 232, 0.2);
+  transition: var(--transition);
+}
+
+.testimonial:hover .quote i {
+  color: var(--primary-color);
+}
+
+.quote p {
+  font-style: italic;
+  color: var(--text-color);
+  padding-left: 20px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.author img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.testimonial:hover .author img {
+  transform: scale(1.1);
+  border: 2px solid var(--primary-color);
+}
+
+.author-info h4 {
+  margin-bottom: 5px;
+}
+
+.author-info p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .freelancers-hero .search-bar {
+    flex-direction: column;
+  }
+  
+  .freelancers-hero .search-bar input,
+  .freelancers-hero .search-bar select,
+  .freelancers-hero .search-bar button {
+    width: 100%;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .freelancers-hero .search-bar select {
+    max-width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .freelancers-hero .search-bar button {
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+}
+
+@media (max-width: 768px) {
+  .freelancers-hero {
+    padding: 100px 0 60px;
+  }
+  
+  .freelancers-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .freelancers-filter .filter-options {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .freelancers-filter .filter-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .freelancers-filter .btn-outline {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .freelancers-grid-section .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .freelancer-info .action-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .freelancers-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .freelancers-hero p {
+    font-size: 1rem;
+  }
+  
+  .freelancer-card {
+    max-width: 100%;
+  }
+} 

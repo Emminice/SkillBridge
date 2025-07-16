@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBridge - Connecting Talent with Opportunity</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="theme-style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-light">Light</button>
+                <button id="theme-dark">Dark</button>
+                <button id="theme-system">System</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/icons/logo.svg" alt="SkillBridge Logo">
+                <!-- <span>SkillBridge</span> -->
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="freelancers.html">Service Experts</a></li>
+                    <li><a href="clients.html">For Clients</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Log In</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bridge Your Skills to the World</h1>
+                <p>Find the perfect freelance services for your business or showcase your skills to millions of potential clients.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="What service are you looking for?">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+                <div class="popular-tags">
+                    <span>Popular:</span>
+                    <a href="#">Plumbing</a>
+                    <a href="#">Catering</a>
+                    <a href="#">Web Design</a>
+                    <a href="#">Graphic Design</a>
+                    <a href="#">Writing</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.jpg" alt="Freelancers working">
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="trusted-by">
+        <div class="container">
+            <p>Trusted by leading brands and startups worldwide</p>
+            <div class="brands">
+                <img src="images/icons/brand1.svg" alt="Brand 1">
+                <img src="images/icons/brand2.svg" alt="Brand 2">
+                <img src="images/icons/brand3.svg" alt="Brand 3">
+                <img src="images/icons/brand4.svg" alt="Brand 4">
+                <img src="images/icons/brand5.svg" alt="Brand 5">
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2>Popular Professional Services</h2>
+            <div class="categories-grid">
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Plumbing</h3>
+                    <p>Expert plumbing services for homes and businesses</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Catering</h3>
+                    <p>Professional catering for all your events</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Stunning designs for your brand</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Writing & Translation</h3>
+                    <p>Quality content in any language</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video & Animation</h3>
+                    <p>Engaging video content</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Grow your business online</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Music & Audio</h3>
+                    <p>Professional audio services</p>
+                </a>
+            </div>
+            <div class="view-more">
+                <a href="services.html" class="btn btn-outline">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How SkillBridge Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Find the Perfect Service</h3>
+                        <p>Browse through thousands of professional services or search for exactly what you need.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Connect with Professionals</h3>
+                        <p>Review profiles, portfolios, and ratings then contact professionals directly.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Collaborate Securely</h3>
+                        <p>Use our platform to communicate, share files, and make secure payments.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Get Work Done</h3>
+                        <p>Receive high-quality work and provide feedback to help the community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Freelancers Section -->
+    <section class="featured-freelancers">
+        <div class="container">
+            <h2>Featured Freelancers</h2>
+            <div class="freelancers-grid">
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile1.jpg" alt="John Doe">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Samuel Ajayi</h3>
+                        <p class="title">Plumbing Expert</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                        <div class="skills">
+                            <span>Pipe Repair</span>
+                            <span>Installation</span>
+                            <span>Maintenance</span>
+                        </div>
+                        <div class="price">Starting at $50/hr</div>
+                        <a href="#" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile2.jpg" alt="Sarah Smith">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Esther Mbuk</h3>
+                        <p class="title">Professional Caterer</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Delta, Nigeria</p>
+                        <div class="skills">
+                            <span>Event Catering</span>
+                            <span>Weddings</span>
+                            <span>Corporate Events</span>
+                        </div>
+                        <div class="price">Starting at $500/event</div>
+                        <a href="#" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile3.jpg" alt="Michael Johnson">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Emmanuel Hundeyin</h3>
+                        <p class="title">Web Developer</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Abuja - FCT, Nigeria</p>
+                        <div class="skills">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Full Stack</span>
+                        </div>
+                        <div class="price">Starting at $75/hr</div>
+                        <a href="#" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile4.jpg" alt="Emma Wilson">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>John Fagboyo</h3>
+                        <p class="title">Graphic Designer</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Ogun State, Nigeria</p>
+                        <div class="skills">
+                            <span>Logo Design</span>
+                            <span>Branding</span>
+                            <span>Illustration</span>
+                        </div>
+                        <div class="price">Starting at $45/hr</div>
+                        <a href="#" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-more">
+                <a href="freelancers.html" class="btn btn-outline">View More Freelancers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>SkillBridge has completely transformed how I find work as a freelance plumber. I've doubled my income in just three months!</p>
+                    </div>
+                    <div class="author">
+                        <img src="images/freelancers/profile6.jpg" alt="David Brown">
+                        <div class="author-info">
+                            <h4>Daniel Balogun</h4>
+                            <p>Professional Plumber</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>As a small business owner, finding reliable caterers was always a challenge. SkillBridge made it so easy to connect with top-quality professionals.</p>
+                    </div>
+                    <div class="author">
+                        <img src="images/freelancers/profile5.jpg" alt="Lisa Chen">
+                        <div class="author-info">
+                            <h4>Grace Eze</h4>
+                            <p>Restaurant Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>The platform is intuitive and secure. I've built a steady client base for my web development services without any hassle.</p>
+                    </div>
+                    <div class="author">
+                        <img src="images/freelancers/profile7.jpg" alt="Robert Taylor">
+                        <div class="author-info">
+                            <h4>Ruth Obodo</h4>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Get Started?</h2>
+                <p>Join thousands of professionals and clients who are already benefiting from SkillBridge.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Find Services</a>
+                    <a href="#" class="btn btn-outline">Become a Freelancer</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SkillBridge</h3>
+                    <p>Connecting skilled professionals with clients worldwide since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>For Freelancers</h4>
+                    <ul>
+                        <li><a href="#">How to Get Hired</a></li>
+                        <li><a href="#">Profile Tips</a></li>
+                        <li><a href="#">Pricing Strategies</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>For Clients</h4>
+                    <ul>
+                        <li><a href="#">How to Hire</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Client Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Trust & Safety</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 SkillBridge. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/language-switcher.js"></script>
+</body>
+</html>

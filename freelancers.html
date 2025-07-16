@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Experts - SkillBridge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/freelancers.css">
+    <link rel="stylesheet" href="css/light-theme.css" id="theme-style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="language-selector">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+            <div class="theme-switcher">
+                <button id="theme-light">Light</button>
+                <button id="theme-dark">Dark</button>
+                <button id="theme-system">System</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/icons/logo.svg" alt="SkillBridge Logo">
+                <!-- <span>SkillBridge</span> -->
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="freelancers.html">Service Experts</a></li>
+                    <li><a href="clients.html">For Clients</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Log In</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Freelancers Hero Section -->
+    <section class="freelancers-hero">
+        <div class="container">
+            <h1>Find Top Service Experts</h1>
+            <p>Connect with skilled professionals across hundreds of service categories.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for service experts...">
+                <select>
+                    <option value="">All Categories</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="catering">Catering</option>
+                    <option value="web-design">Web Design</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="writing">Writing</option>
+                </select>
+                <select>
+                    <option value="">All Locations</option>
+                    <option value="ngr">Nigeria</option>
+                    <option value="gna">Ghana</option>
+                    <option value="saf">South Africa</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                    <option value="au">Australia</option>
+                    <option value="eu">Europe</option>
+                </select>
+                <button class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freelancers Filter Section -->
+    <section class="freelancers-filter">
+        <div class="container">
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" placeholder="Add skills">
+                </div>
+                <div class="filter-group">
+                    <label for="rate">Hourly Rate:</label>
+                    <select id="rate">
+                        <option value="">Any</option>
+                        <option value="0-25">$0 - $25</option>
+                        <option value="25-50">$25 - $50</option>
+                        <option value="50-100">$50 - $100</option>
+                        <option value="100+">$100+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="availability">Availability:</label>
+                    <select id="availability">
+                        <option value="">Any</option>
+                        <option value="full-time">Full-time</option>
+                        <option value="part-time">Part-time</option>
+                        <option value="as-needed">As needed</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="language">Language:</label>
+                    <select id="language">
+                        <option value="">Any</option>
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="chinese">Chinese</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="rating">Rating:</label>
+                    <select id="rating">
+                        <option value="">Any</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="3">3+ Stars</option>
+                    </select>
+                </div>
+                <button class="btn btn-outline">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freelancers Grid Section -->
+    <section class="freelancers-grid-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Top Rated Freelancers</h2>
+                <div class="sort-options">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort">
+                        <option value="relevance">Relevance</option>
+                        <option value="rating">Rating</option>
+                        <option value="newest">Newest</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="freelancers-grid">
+                <!-- Freelancer 1 -->
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile1.jpg" alt="John Doe">
+                        <div class="badge top-rated">Top Rated</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                            <span class="reviews">(128)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Samuel Ajayi</h3>
+                        <p class="title">Plumbing Expert</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria</p>
+                        <div class="skills">
+                            <span>Pipe Repair</span>
+                            <span>Installation</span>
+                            <span>Maintenance</span>
+                        </div>
+                        <div class="rate">$50 - $150/hr</div>
+                        <div class="availability">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Available now</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-primary">Hire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Freelancer 2 -->
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile2.jpg" alt="Sarah Smith">
+                        <div class="badge pro">Pro</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                            <span class="reviews">(96)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Esther Mbuk</h3>
+                        <p class="title">Professional Caterer</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Delta, Nigeria</p>
+                        <div class="skills">
+                            <span>Event Catering</span>
+                            <span>Weddings</span>
+                            <span>Corporate Events</span>
+                        </div>
+                        <div class="rate">$500 - $5,000/event</div>
+                        <div class="availability">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Available now</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-primary">Hire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Freelancer 3 -->
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile3.jpg" alt="Michael Johnson">
+                        <div class="badge rising-talent">Rising Talent</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.8</span>
+                            <span class="reviews">(245)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Emmanuel Hundeyin</h3>
+                        <p class="title">Web Developer</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Abuja - FCT, Nigeria</p>
+                        <div class="skills">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Full Stack</span>
+                        </div>
+                        <div class="rate">$75 - $200/hr</div>
+                        <div class="availability">
+                            <i class="fas fa-clock"></i>
+                            <span>Available in 3 days</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-primary">Hire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Freelancer 4 -->
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile4.jpg" alt="Emma Wilson">
+                        <div class="badge top-rated">Top Rated</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.7</span>
+                            <span class="reviews">(312)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>John Fagboyo</h3>
+                        <p class="title">Graphic Designer</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Ogun State, Nigeria</p>
+                        <div class="skills">
+                            <span>Logo Design</span>
+                            <span>Branding</span>
+                            <span>Illustration</span>
+                        </div>
+                        <div class="rate">$45 - $120/hr</div>
+                        <div class="availability">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Available now</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-primary">Hire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Freelancer 5 -->
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile8.jpg" alt="David Brown">
+                        <div class="badge pro">Pro</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                            <span class="reviews">(178)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Isaac Mensah</h3>
+                        <p class="title">Electrician</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Acra, Ghana</p>
+                        <div class="skills">
+                            <span>Wiring</span>
+                            <span>Installation</span>
+                            <span>Repairs</span>
+                        </div>
+                        <div class="rate">$65 - $175/hr</div>
+                        <div class="availability">
+                            <i class="fas fa-clock"></i>
+                            <span>Available in 1 day</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-primary">Hire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Freelancer 6 -->
+                <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile9.jpg" alt="Lisa Chen">
+                        <div class="badge top-rated">Top Rated</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                            <span class="reviews">(203)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Mary Khumalo</h3>
+                        <p class="title">Marketing Consultant</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Johannesburg, South Africa</p>
+                        <div class="skills">
+                            <span>SEO</span>
+                            <span>Social Media</span>
+                            <span>Content Strategy</span>
+                        </div>
+                        <div class="rate">$80 - $250/hr</div>
+                        <div class="availability">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Available now</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-primary">Hire Now</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Freelancer 7 -->
+                <!-- <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile7.jpg" alt="Robert Taylor">
+                        <div class="badge rising-talent">Rising Talent</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.6</span>
+                            <span class="reviews">(87)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Robert Taylor</h3>
+                        <p class="title">Handyman</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Houston, USA</p>
+                        <div class="skills">
+                            <span>Home Repairs</span>
+                            <span>Furniture Assembly</span>
+                            <span>General Maintenance</span>
+                        </div>
+                        <div class="rate">$40 - $100/hr</div>
+                        <div class="availability">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Available now</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-primary">Hire Now</a>
+                        </div>
+                    </div>
+                </div> -->
+                
+                <!-- Freelancer 8 -->
+                <!-- <div class="freelancer-card">
+                    <div class="freelancer-image">
+                        <img src="images/freelancers/profile8.jpg" alt="Sophia Martinez">
+                        <div class="badge pro">Pro</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <span>4.9</span>
+                            <span class="reviews">(156)</span>
+                        </div>
+                    </div>
+                    <div class="freelancer-info">
+                        <h3>Sophia Martinez</h3>
+                        <p class="title">Interior Designer</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Miami, USA</p>
+                        <div class="skills">
+                            <span>Space Planning</span>
+                            <span>Decorating</span>
+                            <span>Color Consulting</span>
+                        </div>
+                        <div class="rate">$60 - $180/hr</div>
+                        <div class="availability">
+                            <i class="fas fa-clock"></i>
+                            <span>Available in 2 days</span>
+                        </div>
+                        <div class="action-buttons">
+                            <a href="#" class="btn btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-primary">Hire Now</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="view-more">
+                <a href="#" class="btn btn-outline">Load More Freelancers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Freelancers Section -->
+    <section class="why-choose-freelancers">
+        <div class="container">
+            <h2>Why Choose SkillBridge Freelancers?</h2>
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Verified Professionals</h3>
+                    <p>All freelancers go through our verification process to ensure quality and reliability.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Safe Payments</h3>
+                    <p>Our payment protection ensures you only pay when you're satisfied with the work.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is always available to assist with any issues.</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Top Talent</h3>
+                    <p>Access to the best professionals across hundreds of service categories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Client Success Stories</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>I needed a plumber urgently when my basement flooded. Found an amazing professional on SkillBridge who came within the hour and fixed the issue. The platform made it so easy to find help when I needed it most.</p>
+                    </div>
+                    <div class="author">
+                        <img src="images/testimonials/client4.jpg" alt="Jennifer Adams">
+                        <div class="author-info">
+                            <h4>Jennifer Adams</h4>
+                            <p>Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Our startup needed a complete rebranding. Through SkillBridge, we found a fantastic designer who understood our vision perfectly. The quality of work exceeded our expectations and helped elevate our brand.</p>
+                    </div>
+                    <div class="author">
+                        <img src="images/testimonials/client5.jpg" alt="Daniel Kim">
+                        <div class="author-info">
+                            <h4>Daniel Kim</h4>
+                            <p>Startup Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Planning our wedding was stressful until we found an incredible caterer and photographer on SkillBridge. They made our special day perfect, and the platform gave us confidence in their professionalism.</p>
+                    </div>
+                    <div class="author">
+                        <img src="images/testimonials/client6.jpg" alt="Amanda & James">
+                        <div class="author-info">
+                            <h4>Amanda & James</h4>
+                            <p>Newlyweds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Find Your Perfect Freelancer Today</h2>
+                <p>Join thousands of clients who have successfully completed projects with skilled professionals.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Browse Freelancers</a>
+                    <a href="#" class="btn btn-outline">Learn How It Works</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>SkillBridge</h3>
+                    <p>Connecting skilled professionals with clients worldwide since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>For Freelancers</h4>
+                    <ul>
+                        <li><a href="#">How to Get Hired</a></li>
+                        <li><a href="#">Profile Tips</a></li>
+                        <li><a href="#">Pricing Strategies</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>For Clients</h4>
+                    <ul>
+                        <li><a href="#">How to Hire</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                        <li><a href="#">Project Management</a></li>
+                        <li><a href="#">Client Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Trust & Safety</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 SkillBridge. All rights reserved.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/language-switcher.js"></script>
+</body>
+</html>

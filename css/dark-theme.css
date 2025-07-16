@@ -1,0 +1,43 @@
+/* Dark Theme Specific Styles */
+:root {
+  --primary-color: #7d76ff;
+  --primary-dark: #6b63ee;
+  --primary-light: #938dff;
+  --secondary-color: #ff8fa3;
+  --secondary-dark: #ff6b8b;
+  --accent-color: #4fd1a5;
+  --accent-dark: #42b983;
+  --text-color: #f7fafc;
+  --text-light: #e2e8f0;
+  --text-lighter: #cbd5e0;
+  --bg-color: #1a202c;
+  --bg-light: #2d3748;
+  --border-color: #4a5568;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Theme Specific Adjustments */
+.header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.category-card, .step, .freelancer-card, .testimonial {
+  border: 1px solid var(--border-color);
+}
+
+.search-bar input {
+  background-color: var(--bg-light);
+  color: var(--text-color);
+}
+
+.search-bar input::placeholder {
+  color: var(--text-lighter);
+}
+
+.language-selector select, .theme-switcher button {
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
