@@ -1,6 +1,13 @@
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
+    
+    // Check if theme toggle exists on page
+    if (!themeToggle) {
+        console.error('Theme toggle button not found!');
+        return;
+    }
+    
     const themeIcon = themeToggle.querySelector('i');
     const root = document.documentElement;
     
@@ -39,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function applyTheme(theme) {
         root.setAttribute('data-theme', theme);
         
-        // Optional: Add smooth transition
+        // Add smooth transition
         document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
         setTimeout(() => {
             document.body.style.transition = '';
@@ -50,12 +57,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateIcon(theme) {
         if (theme === 'light') {
             themeIcon.className = 'fas fa-sun';
+            themeToggle.title = 'Light mode - Click for dark mode';
         } else {
             themeIcon.className = 'fas fa-moon';
+            themeToggle.title = 'Dark mode - Click for light mode';
         }
     }
     
-    // Optional: Check system preference on first visit if no saved theme
+    // Check system preference on first visit if no saved theme
     if (!localStorage.getItem('theme')) {
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         const systemTheme = systemPrefersDark ? 'dark' : 'light';
