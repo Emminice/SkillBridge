@@ -267,7 +267,7 @@ p {
   transition: var(--transition);
 }
 
-<!-- .navbar ul {
+/* .navbar ul {
   display: flex;
   gap: 25px;
 }
@@ -310,7 +310,7 @@ p {
 
 .mobile-menu-btn:hover {
   color: var(--primary-color);
-} -->
+} */
 
 /* Hero Section */
 .hero {
