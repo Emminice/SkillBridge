@@ -1,73 +1,96 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 
-// Mobile Menu Toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navbar = document.querySelector('.navbar');
-const header = document.querySelector('.header');
 
-// Create overlay element
-const overlay = document.createElement('div');
-overlay.className = 'menu-overlay';
-document.body.appendChild(overlay);
-
-// Toggle menu function
-function toggleMenu() {
-    mobileMenuBtn.classList.toggle('active');
-    navbar.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = navbar.classList.contains('active') ? 'hidden' : '';
-
-    // Toggle icon between bars and times
-    const icon = mobileMenuBtn.querySelector('i');
-    if (navbar.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
-}
-
-// Mobile menu button click
-mobileMenuBtn.addEventListener('click', toggleMenu);
-
-// Close menu when clicking on overlay
-overlay.addEventListener('click', toggleMenu);
-
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.navbar a');
-navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768 && navbar.classList.contains('active')) {
-            toggleMenu();
+// Mobile Menu Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navbar = document.querySelector('.navbar');
+    const overlay = document.querySelector('.menu-overlay');
+    const body = document.body;
+    
+    // Function to toggle menu
+    function toggleMenu() {
+        // Toggle classes
+        mobileMenuBtn.classList.toggle('active');
+        navbar.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        // Toggle body scroll
+        if (navbar.classList.contains('active')) {
+            body.classList.add('menu-open');
+        } else {
+            body.classList.remove('menu-open');
         }
-    });
-});
-
-// Handle window resize
-window.addEventListener('resize', function() {
-    if (window.innerWidth > 768 && navbar.classList.contains('active')) {
-        // Close menu if open and window is resized above mobile breakpoint
+        
+        // Toggle icon between bars and times
+        const icon = mobileMenuBtn.querySelector('i');
+        if (navbar.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    }
+    
+    // Function to close menu
+    function closeMenu() {
         mobileMenuBtn.classList.remove('active');
         navbar.classList.remove('active');
         overlay.classList.remove('active');
-        document.body.style.overflow = '';
+        body.classList.remove('menu-open');
         
         // Reset icon
         const icon = mobileMenuBtn.querySelector('i');
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
     }
-});
-
-// Optional: Close menu with Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && navbar.classList.contains('active')) {
-        toggleMenu();
+    
+    // Mobile menu button click
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleMenu);
     }
-}); 
-
+    
+    // Close menu when clicking on overlay
+    if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+    }
+    
+    // Close menu when clicking on nav links
+    const navLinks = document.querySelectorAll('.navbar a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768 && navbar.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navbar.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+    
+    // Close menu with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navbar.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+    
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
 
 
 
