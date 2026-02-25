@@ -231,7 +231,7 @@ p {
   border-color: var(--primary-color);
 }
 
-/* Header */
+/* Header 
 .header {
   background-color: var(--bg-light);
   padding: 15px 0;
@@ -267,131 +267,7 @@ p {
   transition: var(--transition);
 }
 
-
-
-
-
-
-
-
-
-
-/* Add this at the end of your header CSS */
-
-/* Mobile Menu Styles */
-@media screen and (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-        z-index: 1001;
-    }
-
-    .navbar {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 400px;
-        height: 100vh;
-        background-color: var(--bg-light);
-        padding: 80px 20px 30px;
-        transition: 0.3s ease-in-out;
-        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
-
-    .navbar.active {
-        right: 0;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .navbar ul li {
-        width: 100%;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .navbar ul li:last-child {
-        border-bottom: none;
-    }
-
-    .navbar a {
-        display: block;
-        padding: 15px 0;
-        font-size: 1.1rem;
-    }
-
-    .auth-buttons {
-        display: none; /* Hide auth buttons in header on mobile */
-    }
-
-    /* Optional: Move auth buttons inside mobile menu */
-    .navbar .mobile-auth {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 30px;
-        padding-top: 20px;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar .mobile-auth .btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    /* Overlay when menu is open */
-    .menu-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .menu-overlay.active {
-        display: block;
-        opacity: 1;
-    }
-
-    /* Animate hamburger to X */
-    .mobile-menu-btn.active i {
-        transform: rotate(90deg);
-    }
-
-    .mobile-menu-btn i {
-        transition: transform 0.3s ease;
-    }
-}
-
-/* Tablet and up */
-@media screen and (min-width: 769px) {
-    .navbar .mobile-auth {
-        display: none; /* Hide mobile auth on desktop */
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .navbar ul {
+.navbar ul {
   display: flex;
   gap: 25px;
 }
@@ -435,6 +311,15 @@ p {
 .mobile-menu-btn:hover {
   color: var(--primary-color);
 } */
+
+
+
+
+
+
+
+
+
 
 /* Hero Section */
 .hero {
