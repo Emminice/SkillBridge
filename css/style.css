@@ -248,15 +248,16 @@ p {
 /* Header */
 .header {
   background-color: var(--bg-light);
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100%; /* Ensure full width */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   transition: var(--transition);
 }
 
 .header.scrolled {
+  padding: 10px 0;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -264,37 +265,32 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Full width */
-  max-width: 100%; /* Override any max-width */
-  margin: 0;
-  padding: 1rem 20px;
-  transition: padding 0.3s ease;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
 }
 
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  z-index: 1001;
 }
 
 .logo img {
   height: 40px;
-  width: auto;
   transition: var(--transition);
 }
 
 /* Desktop Navigation */
-.navbar {
-  display: flex;
-  align-items: center;
-  margin: 0 1rem;
-}
-
 .navbar ul {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  gap: 25px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -303,11 +299,10 @@ p {
 .navbar a {
   font-weight: 600;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 5px 0;
   color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s ease;
-  white-space: nowrap;
 }
 
 .navbar a:hover {
@@ -330,55 +325,20 @@ p {
   width: 100%;
 }
 
-/* Right side group - Theme switcher and Auth buttons */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-shrink: 0;
-}
-
-/* Theme Switcher */
-.theme-switcher {
-  display: flex;
-  align-items: center;
-}
-
-.theme-toggle-btn {
-  background: none;
-  border: none;
-  font-size: 1.25rem;
-  color: var(--text-color);
-  cursor: pointer;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.3s ease;
-}
-
-.theme-toggle-btn:hover {
-  color: var(--primary-color);
-}
-
-/* Auth Buttons */
+/* Desktop Auth Buttons */
 .auth-buttons {
   display: flex;
+  gap: 15px;
   align-items: center;
-  gap: 0.75rem;
-  flex-shrink: 0;
 }
 
 .btn {
-  padding: 0.5rem 1.25rem;
-  border-radius: 0.375rem;
+  padding: 8px 20px;
+  border-radius: 5px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
 }
 
 .btn-outline {
@@ -406,20 +366,26 @@ p {
 /* Mobile Menu Button */
 .mobile-menu-btn {
   display: none;
-  align-items: center;
-  justify-content: center;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--text-color);
-  margin-left: 0.5rem;
-  flex-shrink: 0;
+  transition: all 0.3s ease;
+  z-index: 1001;
 }
 
 .mobile-menu-btn:hover {
   color: var(--primary-color);
 }
 
-/* Mobile Auth (hidden by default) */
+.mobile-menu-btn i {
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-btn.active i {
+  transform: rotate(90deg);
+}
+
+/* Mobile Auth (hidden on desktop) */
 .mobile-auth {
   display: none;
 }
@@ -432,7 +398,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -443,115 +409,81 @@ p {
   opacity: 1;
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
-  .navbar ul {
-    gap: 1rem;
-  }
-  
-  .auth-buttons {
-    gap: 0.5rem;
-  }
-  
-  .btn {
-    padding: 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .header .container {
-    padding: 0.75rem 15px;
-  }
-  
-  /* Hide desktop navigation and show mobile menu button */
-  .navbar {
-    display: none; /* Hide completely on mobile */
-  }
-  
-  .auth-buttons {
-    display: none; /* Hide desktop auth buttons */
-  }
-  
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
   .mobile-menu-btn {
-    display: flex; /* Show mobile menu button */
+    display: block;
   }
-  
-  /* Mobile menu - slides from right */
-  .navbar.mobile-active {
-    display: flex;
+
+  .auth-buttons {
+    display: none; /* Hide desktop auth buttons on mobile */
+  }
+
+  .navbar {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 280px;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
     height: 100vh;
-    background: var(--bg-light);
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 80px 20px 30px;
+    background-color: var(--bg-light);
+    padding: 80px 30px 30px;
+    transition: right 0.3s ease-in-out;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    overflow-y: auto;
   }
-  
-  .navbar.mobile-active ul {
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar ul {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    width: 100%;
+    gap: 0;
   }
-  
-  .navbar.mobile-active ul li {
+
+  .navbar ul li {
     width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   }
-  
-  .navbar.mobile-active a {
+
+  .navbar ul li:last-child {
+    border-bottom: none;
+  }
+
+  .navbar a {
     display: block;
-    padding: 0.75rem 0;
-    width: 100%;
+    padding: 15px 0;
+    font-size: 1.1rem;
   }
-  
-  .navbar.mobile-active .mobile-auth {
+
+  /* Show mobile auth buttons in menu */
+  .mobile-auth {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-top: 2rem;
-    width: 100%;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
-  .navbar.mobile-active .mobile-auth .btn {
+
+  .mobile-auth .btn {
     width: 100%;
     text-align: center;
+    padding: 12px 20px;
   }
-  
-  /* Header right group remains horizontal */
-  .header-right {
-    gap: 0.5rem;
-  }
-  
-  /* Theme switcher stays visible */
-  .theme-switcher {
-    display: flex;
+
+  /* Prevent body scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
   }
 }
 
-@media (max-width: 480px) {
-  .header .container {
-    padding: 0.6rem 12px;
-  }
-  
-  .logo img {
-    height: 35px;
-  }
-  
-  .theme-toggle-btn {
-    font-size: 1.1rem;
-    padding: 0.4rem;
-  }
-  
-  .btn {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+/* Tablet and Desktop */
+@media screen and (min-width: 769px) {
+  .navbar {
+    display: block !important; /* Ensure navbar is always visible on desktop */
   }
 }
 
