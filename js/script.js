@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile Menu Toggle
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+<!--  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navbar = document.querySelector('.navbar');
   
   mobileMenuBtn.addEventListener('click', function() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navbar.classList.remove('active');
       }
     });
-  });
+  }); -->
   
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
