@@ -46,6 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function applyTheme(theme) {
         root.setAttribute('data-theme', theme);
         
+        // Also update the theme stylesheet if you're using separate files
+        const themeStyle = document.getElementById('theme-style');
+        if (themeStyle) {
+            themeStyle.href = `css/${theme}-theme.css`;
+        }
+        
         // Add smooth transition
         document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
         setTimeout(() => {
