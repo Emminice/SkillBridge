@@ -237,6 +237,15 @@ p {
 
 
 
+/* Preloader */
+.preloader {
+  background-color: var(--bg-light);
+  transition: var(--transition);
+}
+
+
+
+
 
 
 
