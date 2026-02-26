@@ -609,11 +609,7 @@ p {
 /* Hero Section */
 .hero {
   padding: 100px 0;
- /* background: linear-gradient(135deg, rgba(94, 86, 232, 0.1) 0%, rgba(66, 185, 131, 0.1) 100%); */
-background: linear-gradient(135deg, 
-    rgba(var(--primary-rgb), 0.1) 0%, 
-    rgba(var(--secondary-rgb), 0.1) 100%);
-  transition: background 0.3s ease;
+ background: linear-gradient(135deg, rgba(94, 86, 232, 0.1) 0%, rgba(66, 185, 131, 0.1) 100%); 
   position: relative;
   overflow: hidden;
 }
