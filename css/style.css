@@ -19,6 +19,22 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --radius: 8px;
   --radius-lg: 12px;
+
+
+    /* Add preloader variables for light theme */
+  --preloader-bg: #1e1e2f;
+  --preloader-text: #fff3e0;
+  --preloader-content-bg: rgba(0, 0, 0, 0.25);
+  --preloader-shadow: rgba(0,0,0,0.6);
+  --preloader-border: rgba(255,215,140,0.2);
+  --preloader-gradient: linear-gradient(130deg, #ffdaa2, #ffe6c7);
+  --preloader-text-shadow: #ba8b4a33;
+  --preloader-tagline: #cbb9a0;
+  --preloader-border-light: #ffd78c66;
+  --preloader-dot: #ffc285;
+  --preloader-dot-2: #ffd9a3;
+  --preloader-dot-3: #ffeac2;
+  --preloader-icon-shadow: #00000040;
 }
 
 /* Dark Theme Variables */
@@ -38,6 +54,22 @@
   --border-color: #4a5568;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+
+
+  /* Add preloader variables for dark theme */
+  --preloader-bg: #0a0a14;           /* Darker background */
+  --preloader-text: #e0e0e0;          /* Softer white */
+  --preloader-content-bg: rgba(255, 255, 255, 0.1); /* Lighter overlay */
+  --preloader-shadow: rgba(0,0,0,0.8);
+  --preloader-border: rgba(255, 200, 100, 0.15);
+  --preloader-gradient: linear-gradient(130deg, #4a8bc4, #5cc99b); /* Brand colors */
+  --preloader-text-shadow: #2a5c8233;
+  --preloader-tagline: #a0a0a0;
+  --preloader-border-light: #4a8bc466;
+  --preloader-dot: #4a8bc4;
+  --preloader-dot-2: #5cc99b;
+  --preloader-dot-3: #ffc285;
+  --preloader-icon-shadow: #00000080;
 }
 
 /* Reset & Base Styles */
