@@ -7,10 +7,36 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/clients.css">
     <link rel="stylesheet" href="css/light-theme.css" id="theme-style">
+    <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
+      <!-- PRELOADER (with moving hammer, needle, gear) -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <!-- three animated icons exactly as described -->
+    <div class="icon-row">
+        <span class="icon hammer" role="img" aria-label="hammer">🔨</span>
+        <span class="icon needle" role="img" aria-label="needle and thread">🪡</span>
+        <span class="icon gear" role="img" aria-label="gear">⚙️</span>
+      </div>
+
+      <!-- logo text from the image -->
+     <div class="logo-type">SKILL BRIDGE</div>
+      <div class="tagline">CONNECTING CITIES. EMPOWERING SKILLS.</div>
+
+      <!-- subtle animated dots (extra flair) -->
+     <div class="loading-dot">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
@@ -461,6 +487,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/preloader.js"></script>
     <script src="js/theme-switcher.js"></script>
     <script src="js/language-switcher.js"></script>
     <script src="js/faq.js"></script>
