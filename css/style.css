@@ -32,9 +32,15 @@
   --preloader-text-shadow: rgba(42, 92, 130, 0.2); /* Blue text shadow */
   --preloader-tagline: #2A5C82;        /* Primary blue */
   --preloader-border-light: #2A5C8240;  /* Light blue border */
-  --preloader-dot: #2A5C82;            /* Primary blue */
-  --preloader-dot-2: #4a8bc4;          /* Lighter blue */
-  --preloader-dot-3: #6ba5d9;          /* Even lighter blue */
+
+  --preloader-dot: #4a8bc4;
+  --preloader-dot-2: #5cc99b;
+  --preloader-dot-3: #ffc285;
+
+
+  /* --preloader-dot: #2A5C82; 
+  --preloader-dot-2: #4a8bc4; 
+  --preloader-dot-3: #6ba5d9; */
 }
 
 /* Dark Theme Variables */
