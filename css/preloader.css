@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
-  background: #f5f2eb;
+ /* background: #f5f2eb; */
   min-height: 100vh;
   /* display: flex; */
   align-items: center;
